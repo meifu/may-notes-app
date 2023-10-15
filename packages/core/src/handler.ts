@@ -19,6 +19,10 @@ export default function handler(
         return {
             body,
             statusCode,
+            header: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': true,
+            }
         }
     }
 }
